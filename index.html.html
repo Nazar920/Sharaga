@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Мій веб сайт</title>
+    <style>
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .animated-photo {
+            animation: pulse 2s infinite;
+        }
+
+        body {
+            background-image: url('https://images.unsplash.com/photo-1501973801540-537f08ccae7b?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ff9900;
+            transition: color 0.3s ease;
+        }
+
+        section {
+            animation: fadeInUp 1s ease-out;
+            background-color: rgba(0, 0, 0, 0.6);
+            margin: 20px auto;
+            padding: 20px;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #ffcc00;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.03);
+        }
+
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#about">Про мене</a>
+        <a href="#hobby">Моє хобі</a>
+        <a href="#contacts">Контакти</a>
+    </nav>
+
+    <section id="about">
+        <h2>Про мене</h2>
+        <p>Мене звати Назар і мені 21. Живу та навчаюсь у місті Костопіль.</p>
+        <p>Маю повну середню освіту та диплом кваліфікованого робітника. Зараз навчаюсь на молодшого бакалавра.</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2585.983376278858!2d26.536637576723875!3d50.87825105715109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472f117d4abbbb21%3A0x569a6c6f8f5b270!2z0JrRg9C30YvQutCw0YDQvdC40YfQtdGB0LrQsNGPINGD0LsuLCDQmtC-0LzQsNGC0YPRgSA1Miwg0JrQvtC80LDRgtC-0YDQsNC00YHQutCw0Y8sINCa0L7Qs9Cw0YLQsNC90LrQsNGPINC-0LHQuy4sIDMzMDAw!5e0!3m2!1suk!2sua!4v1714412073747!5m2!1suk!2sua"></iframe>
+    </section>
+
+    <section id="hobby">
+        <h2>Моє хобі</h2>
+        <p>Наразі постійного хобі не маю, але час від часу їздимо з друзями в Карпати (були вже на горі Хом'як та Піп Іван Чорногірський). Також недавно їздили на базальтовий кар'єр.</p>
+        <img src="group.jpg" alt="Фото з друзями на кар'єрі" class="animated-photo">
+    </section>
+
+    <section id="contacts">
+        <h2>Контакти</h2>
+        <p>Телефон: +380639741101</p>
+        <p>Email: <a href="mailto:borejcuknazar@gmail.com" style="color: #ffcc00;">borejcuknazar@gmail.com</a></p>
+        <p>Коледж: <a href="http://www.kbtk.rv.ua/" target="_blank" style="color: #ffcc00;">http://www.kbtk.rv.ua/</a></p>
+    </section>
+
+    <footer>
+        &copy; Назар Борейчук 2025
+    </footer>
+
+echo "# miysayt3" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Nazar920/miysayt3.git
+git push -u origin main
+
+
+
